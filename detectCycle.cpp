@@ -52,7 +52,7 @@ class Solution
         Node *fast = head;
         Node *slow = head;
         
-        while(fast && fast->next->next && fast->next){
+        while(slow && fast && fast->next){
             slow = slow->next;
             fast = fast->next->next;
             if(slow == fast) return true;
